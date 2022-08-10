@@ -1,0 +1,1025 @@
+\documentclass[12pt]{article}
+\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage[table]{xcolor}
+\usepackage{subfigure}
+\usepackage{bigints}
+\usepackage{bbm}
+\usepackage{xr}
+\usepackage{lipsum}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\definecolor{redd}{rgb}{0.8, 0.1, 0.1}
+\definecolor{navyblue}{rgb}{0, 0.6, 0.2}
+\definecolor{amaranth}{rgb}{0.9, 0.17, 0.31}
+\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
+\definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
+\definecolor{brickred}{rgb}{0.8, 0.25, 0.33}
+\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
+\usepackage[colorlinks,linkcolor=navyblue,urlcolor=blue,citecolor=navyblue]{hyperref}
+\newcommand{\navy}[1]{\textcolor{blue}{\bf #1}}
+\newcommand{\navymth}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\usepackage{subfigure}
+\usepackage[authoryear,round]{natbib}
+\usepackage{sectsty}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[]{morefloats}
+\usepackage{booktabs}
+\usepackage{float}
+%\usepackage[runin]{abstract}
+%\abslabeldelim{\;}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{threeparttable}
+%\usepackage{mathptmx}
+%\usepackage{newtxmath}
+%\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{rotating}
+\UseRawInputEncoding
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage[newcommands]{ragged2e}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{setspace} 
+\doublespacing
+\usepackage{mathpazo}
+\usepackage{etoolbox}
+
+\setcounter{MaxMatrixCols}{12}
+
+
+
+
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
+\parskip5pt
+\parindent15pt
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+
+\newcommand{\newtopic}[1]{\textcolor{Green}{\Large \bf #1}}
+
+
+\definecolor{pale}{RGB}{235, 235, 235}
+\definecolor{pale2}{RGB}{175,238,238}
+\definecolor{turquois4}{RGB}{0,134,139}
+
+% Typesetting code
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\newminted{python}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{ipython}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{julia}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{c}{mathescape,linenos=true}
+\newminted{r}{mathescape,  frame=none, baselinestretch=1, framesep=2mm}
+\renewcommand{\theFancyVerbLine}{\sffamily
+	\textcolor[rgb]{0.5,0.5,1.0}{\scriptsize {\arabic{FancyVerbLine}}}}
+
+
+\usepackage{stmaryrd}
+
+\newcommand{\Fact}{\textcolor{Brown}{\bf Fact. }}
+\newcommand{\Facts}{\textcolor{Brown}{\bf Facts }}
+\newcommand{\keya}{\textcolor{turquois4}{\bf Key Idea. }}
+\newcommand{\Factnodot}{\textcolor{Brown}{\bf Fact }}
+\newcommand{\Eg}{\textcolor{ForestGreen}{Example. }}
+\newcommand{\Egs}{\textcolor{ForestGreen}{Examples. }}
+\newcommand{\Ex}{{\bf Ex. }}
+\newcommand{\Thm}{\textcolor{Brown}{\bf Theorem. }}
+\newcommand{\Prf}{\textcolor{turquois4}{\bf Proof.}}
+\newcommand{\Ass}{\textcolor{turquois4}{\bf Assumption.}} 
+\newcommand{\Lem}{\textcolor{Brown}{\bf Lemma. }}
+
+%source code 
+
+
+
+% cali
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{subfigure}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}}
+\newcommand\raiseT[2]{\raisebox{0.25ex}{$#1#2$}}
+
+\DeclareMathOperator{\cl}{cl}
+%\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\Prob}{Prob}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\determinant}{det}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\range}{rng}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\mse}{mse}
+\DeclareMathOperator{\se}{se}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\dimension}{dim}
+\DeclareMathOperator{\fracpart}{frac}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\colspace}{colspace}
+
+\providecommand{\inner}[1]{\left\langle{#1}\right\rangle}
+
+% mics short cuts and symbols
+% mics short cuts and symbols
+\newcommand{\st}{\ensuremath{\ \mathrm{s.t.}\ }}
+\newcommand{\setntn}[2]{ \{ #1 : #2 \} }
+\newcommand{\cf}[1]{ \lstinline|#1| }
+\newcommand{\otms}[1]{ \leftidx{^\circ}{#1}}
+
+\newcommand{\fore}{\therefore \quad}
+\newcommand{\tod}{\stackrel { d } {\to} }
+\newcommand{\tow}{\stackrel { w } {\to} }
+\newcommand{\toprob}{\stackrel { p } {\to} }
+\newcommand{\toms}{\stackrel { ms } {\to} }
+\newcommand{\eqdist}{\stackrel {\textrm{ \scriptsize{d} }} {=} }
+\newcommand{\iidsim}{\stackrel {\textrm{ {\sc iid }}} {\sim} }
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\dee}{\,{\rm d}}
+\newcommand{\given}{\, | \,}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\renewcommand{\rho}{\varrho}
+
+\newcommand{\htau}{ \hat \tau }
+\newcommand{\hgamma}{ \hat \gamma }
+
+\newcommand{\boldx}{ {\mathbf x} }
+\newcommand{\boldu}{ {\mathbf u} }
+\newcommand{\boldv}{ {\mathbf v} }
+\newcommand{\boldw}{ {\mathbf w} }
+\newcommand{\boldy}{ {\mathbf y} }
+\newcommand{\boldb}{ {\mathbf b} }
+\newcommand{\bolda}{ {\mathbf a} }
+\newcommand{\boldc}{ {\mathbf c} }
+\newcommand{\boldi}{ {\mathbf i} }
+\newcommand{\bolde}{ {\mathbf e} }
+\newcommand{\boldp}{ {\mathbf p} }
+\newcommand{\boldq}{ {\mathbf q} }
+\newcommand{\bolds}{ {\mathbf s} }
+\newcommand{\boldt}{ {\mathbf t} }
+\newcommand{\boldz}{ {\mathbf z} }
+
+\newcommand{\boldzero}{ {\mathbf 0} }
+\newcommand{\boldone}{ {\mathbf 1} }
+
+\newcommand{\boldalpha}{ {\boldsymbol \alpha} }
+\newcommand{\boldbeta}{ {\boldsymbol \beta} }
+\newcommand{\boldgamma}{ {\boldsymbol \gamma} }
+\newcommand{\boldtheta}{ {\boldsymbol \theta} }
+\newcommand{\boldxi}{ {\boldsymbol \xi} }
+\newcommand{\boldtau}{ {\boldsymbol \tau} }
+\newcommand{\boldepsilon}{ {\boldsymbol \epsilon} }
+\newcommand{\boldmu}{ {\boldsymbol \mu} }
+\newcommand{\boldSigma}{ {\boldsymbol \Sigma} }
+\newcommand{\boldOmega}{ {\boldsymbol \Omega} }
+\newcommand{\boldPhi}{ {\boldsymbol \Phi} }
+\newcommand{\boldLambda}{ {\boldsymbol \Lambda} }
+\newcommand{\boldphi}{ {\boldsymbol \phi} }
+
+\newcommand{\Sigmax}{ {\boldsymbol \Sigma_{\boldx}}}
+\newcommand{\Sigmau}{ {\boldsymbol \Sigma_{\boldu}}}
+\newcommand{\Sigmaxinv}{ {\boldsymbol \Sigma_{\boldx}^{-1}}}
+\newcommand{\Sigmav}{ {\boldsymbol \Sigma_{\boldv \boldv}}}
+
+\newcommand{\hboldx}{ \hat {\mathbf x} }
+\newcommand{\hboldy}{ \hat {\mathbf y} }
+\newcommand{\hboldb}{ \hat {\mathbf b} }
+\newcommand{\hboldu}{ \hat {\mathbf u} }
+\newcommand{\hboldtheta}{ \hat {\boldsymbol \theta} }
+\newcommand{\hboldtau}{ \hat {\boldsymbol \tau} }
+\newcommand{\hboldmu}{ \hat {\boldsymbol \mu} }
+\newcommand{\hboldbeta}{ \hat {\boldsymbol \beta} }
+\newcommand{\hboldgamma}{ \hat {\boldsymbol \gamma} }
+\newcommand{\hboldSigma}{ \hat {\boldsymbol \Sigma} }
+
+\newcommand{\boldA}{\mathbf A}
+\newcommand{\boldB}{\mathbf B}
+\newcommand{\boldC}{\mathbf C}
+\newcommand{\boldD}{\mathbf D}
+\newcommand{\boldI}{\mathbf I}
+\newcommand{\boldL}{\mathbf L}
+\newcommand{\boldM}{\mathbf M}
+\newcommand{\boldP}{\mathbf P}
+\newcommand{\boldQ}{\mathbf Q}
+\newcommand{\boldR}{\mathbf R}
+\newcommand{\boldX}{\mathbf X}
+\newcommand{\boldU}{\mathbf U}
+\newcommand{\boldV}{\mathbf V}
+\newcommand{\boldW}{\mathbf W}
+\newcommand{\boldY}{\mathbf Y}
+\newcommand{\boldZ}{\mathbf Z}
+
+\newcommand{\bSigmaX}{ {\boldsymbol \Sigma_{\hboldbeta}} }
+\newcommand{\hbSigmaX}{ \mathbf{\hat \Sigma_{\hboldbeta}} }
+
+\newcommand{\RR}{\mathbbm R}
+\newcommand{\CC}{\mathbbm C}
+\newcommand{\NN}{\mathbbm N}
+\newcommand{\PP}{\mathbbm P}
+\newcommand{\EE}{\mathbbm E \nobreak\hspace{.1em}}
+\newcommand{\EEP}{\mathbbm E_P \nobreak\hspace{.1em}}
+\newcommand{\ZZ}{\mathbbm Z}
+\newcommand{\QQ}{\mathbbm Q}
+
+
+\newcommand{\XX}{\mathcal X}
+
+\newcommand{\aA}{\mathcal A}
+\newcommand{\fF}{\mathscr F}
+\newcommand{\bB}{\mathscr B}
+\newcommand{\iI}{\mathscr I}
+\newcommand{\rR}{\mathscr R}
+\newcommand{\dD}{\mathcal D}
+\newcommand{\lL}{\mathcal L}
+\newcommand{\llL}{\mathcal{H}_{\ell}}
+\newcommand{\gG}{\mathcal G}
+\newcommand{\hH}{\mathcal H}
+\newcommand{\nN}{\textrm{\sc n}}
+\newcommand{\lN}{\textrm{\sc ln}}
+\newcommand{\pP}{\mathscr P}
+\newcommand{\qQ}{\mathscr Q}
+\newcommand{\xX}{\mathcal X}
+
+\newcommand{\ddD}{\mathscr D}
+
+
+\newcommand{\R}{{\texttt R}}
+\newcommand{\risk}{\mathcal R}
+\newcommand{\Remp}{R_{{\rm emp}}}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\ess}{ \textrm{{\sc ess}} }
+\newcommand{\tss}{ \textrm{{\sc tss}} }
+\newcommand{\rss}{ \textrm{{\sc rss}} }
+\newcommand{\rssr}{ \textrm{{\sc rssr}} }
+\newcommand{\ussr}{ \textrm{{\sc ussr}} }
+\newcommand{\zdata}{\mathbf{z}_{\mathcal D}}
+\newcommand{\Pdata}{P_{\mathcal D}}
+\newcommand{\Pdatatheta}{P^{\mathcal D}_{\theta}}
+\newcommand{\Zdata}{Z_{\mathcal D}}
+
+
+\newcommand{\e}[1]{\mathbbm{E}[{#1}]}
+\newcommand{\p}[1]{\mathbbm{P}({#1})}
+
+%\theoremstyle{plain}
+%\newtheorem{axiom}{Axiom}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{remark}{Remark}[section]
+%\newtheorem{notation}{Notation}[section]
+%\newtheorem{assumption}{Assumption}[section]
+%\newtheorem{condition}{Condition}[section]
+%\newtheorem{exercise}{Ex.}[section]
+%\newtheorem{fact}{Fact}[section]
+
+
+\usepackage[T1]{fontenc}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{assumption}{Assumption}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{observation}{Observation}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+\makeatletter
+\def\title@font{\Large\bfseries}
+\let\ltx@maketitle\@maketitle
+\def\@maketitle{\bgroup%
+	\let\ltx@title\@title%
+	\def\@title{\resizebox{\textwidth}{!}{%
+			\mbox{\title@font\ltx@title}%
+	}}%
+	\ltx@maketitle%
+	\egroup}
+\makeatother
+\usepackage{setspace}
+\usepackage{amsmath}
+\onehalfspacing
+\newenvironment{p_enumerate}{
+	\begin{enumerate}
+		\setlength{\itemsep}{1pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\parsep}{0pt}
+	}{\end{enumerate}}
+\sectionfont{\centering\mdseries\scshape\bfseries}
+\subsectionfont{\raggedright\mdseries\scshape\bfseries}
+\subsubsectionfont{\flushleft\mdseries\itshape\bfseries}
+\makeatletter
+\def\@seccntformat#1{\csname the#1\endcsname.\quad}
+\makeatother
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+		\hbox{}\nobreak\hfil(#1)%
+		\parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+{\savebox\mybox{#1}\begin{quote}}
+	{\signed{\usebox\mybox}\end{quote}}
+
+\pdfminorversion=4
+
+\makeatletter
+\newcommand{\changeoperator}[1]{%
+	\csletcs{#1@saved}{#1@}%
+	\csdef{#1@}{\changed@operator{#1}}%
+}
+\newcommand{\changed@operator}[1]{%
+	\mathop{%
+		\mathchoice{\textstyle\csuse{#1@saved}}
+		{\csuse{#1@saved}}
+		{\csuse{#1@saved}}
+		{\csuse{#1@saved}}%
+	}%
+}
+\makeatother
+
+\changeoperator{sum}
+\changeoperator{
+	prod}
+
+\begin{document}
+	
+	
+	
+	
+	
+	
+	\vspace{-0.5ex}
+	
+	
+	
+	
+	
+	
+	
+	
+	\newpage{}
+	
+	
+	
+	
+	
+	
+	\title{{High Frequency Inflation Forecasting  %\thanks {}
+			%\title{{Money Demand Breakdown: An international Investigation
+			}}
+			
+			
+			
+			%\date{This version: February, 2016\\
+				%{First version: December, 2015}}
+			\date{This version: August 2022}%\\This version: February, 2017}
+		
+		
+		\author{Sonan Memon\footnote{Research Economist, PIDE, Islamabad. \texttt{smemon@pide.org.pk}}}
+		
+		
+		
+		\newpage{}
+		
+		\maketitle
+		\vspace{-2ex}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\begin{center}
+			\line(1,0){470}
+		\end{center}
+		\begin{spacing}{1.1}
+			\vspace{-3ex}
+			\begin{abstract}
+				\noindent 
+				I begin by motivating the utility of high frequency inflation forecasting. I review recent work done at the State Bank of Pakistan for inflation forecasting and now-casting large scale manufacturing growth using machine learning. I also present stylized facts about the structure of historical and especially recent inflation trends in Pakistan. However, since the available data \textit{and} already used methods cannot achieve high frequency forecasting, I discuss $3$ cutting edge techniques from recent literature including \textit{web scrapping}, \textit{scanner data} and \textit{synthetic data}. Due to lack of access to scanner and web-scrapped data, I generate synthetic data using \textit{generative} machine learning models (Gaussian Copula and PAR models) and \textit{numerical analysis} (cubic spline interpolation) to estimate high frequency inflation (e.g monthly and weekly) during 1958 to 2022 and forecast future short-run inflation for Pakistan. I evaluate the accuracy of forecasts using forecast error variances, using a reduced form vector autoregressive model.
+				
+				%I evaluate the forecasting potential of my method through VAR (Vector Autoregressive Models) models and forecast error variance decompositions (FEVD).
+			\end{abstract}
+		\end{spacing}
+		\textbf{Keywords:} High Frequency Inflation Forecasting. Forecast Accuracy. Web Scrapping. Scanner Data. Synthetic Data. Machine Learning. Hyperinflation. Forecasts of Inflation in Pakistan. {}\\
+		\textbf{JEL Classification:} E30, E31, E32, E37, E47, E52, E58, C53.
+		%\textbf{JEL Classifications:}
+		\\
+		\begin{center}
+			\vspace{-8ex}
+			\line(1,0){470}
+		\end{center}
+		\pagenumbering{arabic}
+		\baselineskip=18pt 
+		
+		\newpage{}
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=0.4\linewidth]{pidelogo.jpg}		
+				\caption*{}
+			\end{center}
+		\end{figure}
+		
+		\vspace{-8ex}
+		
+		
+		
+		\tableofcontents
+		
+		\newpage{}
+		
+		\vspace{-8ex}
+		
+		
+		
+		
+		\section{Motivation}
+		
+		Accurate forecasting of inflation is a concern for market players, central banks and governments. The market participants want to update their inflation expectations in line with new information revelation so that their investment strategies are optimal. Meanwhile, central banks typically have mandates for price stability and they routinely collect data on inflation expectations and forecasts \cite{cukierman1992measuring}. Of course, hyperinflation dramatically hurts hand to mouth households and this extreme economic turmoil has political consequences for governments, especially when the election period is nearby (see for instance \cite{binder2021political}). Thus, governments have an incentive to make inflation control a priority and interfere with central bank independence, a few months before elections. At the most fundamental level, hyperinflation episodes are humanitarian and social crises which can be addressed to some extent if we develop better inflation forecasting methods, independent central banks and policy interventions.
+		
+		In fact, there is a well known classic literature on the so called political business cycle, initiated by \cite{nordhaus1975political}. For instance, \cite{abrams2012political} show that recordings reveal that President \textit{Nixon} of USA manipulated Arthur Burns\footnote{Head of the Federal Reserve Bank} and the Federal Reserve into creating a political business cycle which helped ensure his reelection victory in 1972. While President Nixon understood the risks that his monetary policy imposed but chose to trade longer-term economic costs to the economy for his own short-term political profits. 
+		
+		
+		
+		
+		While central banks collect data on consumer price indices, the frequency of such data does not allow accounting for sudden swings in inflation \textit{and} inflation expectations. Some examples of standard measures include the HICP (Harmonized Consumer Price Index) data used in the Euro area and the CPI (consumer price index) data from USA. Such data typically tends to be quarterly in worst cases or in best cases monthly, but results are revealed in the next month after collection. However, when for instance, in a matter of few days and weeks, news about the Ukraine and Russian crisis changed the inflation expectations of many products, conventional price indices had little forecasting potential for the following inflation crisis. Similarly, inflation shocks can result from sudden change of central bank's governors or government change, terrorism episodes or political turmoil, especially in developing economies, where inflation tends to more volatile and central banks are less independent (see \cite{vuletin2011replacing}).
+		
+		
+		\section{Research at SBP}
+		
+		
+		
+		The State Bank of Pakistan (SBP) has also done some work on inflation forecasting by using machine learning methods (e.g Neural Networks)\footnote{For a review of machine learning methods see} and monthly year on year (YoY) inflation rates of Pakistan from Jan 1958 to Dec 2017 \cite{hanif2018thick}. The \textit{Thick ANN} (Artificial Neural Networks) model developed in this paper is found to outperform all the 15 econometric models of Pakistan economy previously developed in forecasting 24 months ahead headline inflation.
+		
+		Similarly, the SBP has worked on \textit{nowcasting} GDP using large scale manufacturing growth (LSM) in Pakistan \cite{hussain2018nowcasting} and LASSO type\footnote{Least Absolute Shrinkage Operator, Ridge Regressions and Elastic Nets.} ML methods. The models are used to extract the unique \textit{information} from a range of variables having close association with LSM in Pakistan. The results displayed in Figure 1 from \cite{hussain2018nowcasting} below reveal that the predicted LSM series closely tracks the actual LSM series. Since LSM is available at relatively higher frequency (monthly) relative to the actual GDP (annual), it is a predictor for determinants of economic activity such as key sectors, prices, credit, interest rates and tax collection, external trade and inflows. This is in line with emerging methodologies among central banks worldwide, which are all moving toward big data and machine learning methods (see \cite{doerr2021big}). 
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{LSM_SBP.png}
+				\caption{Nowcasting LSM For Pakistan (Source is \cite{hussain2018nowcasting})}
+			\end{Center}
+		\end{figure}
+		
+		
+		However, lack of availability of high frequency data on the order of days or weeks poses a limitation in forecasting inflation. Hence, I argue that we need more granular data, on the order of days or weeks for enhancing forecasting. Next, I discuss methods for collecting such high frequency data, used at the current frontier of research on inflation.
+		
+		
+		
+		
+		
+		
+		
+		
+		\section{Review of Modern Forecasting}
+		
+		I will briefly review three methods including \textit{web scrapping} online inflation data, using \textit{scanner data} from supermarkets and \textit{synthetic} data for high frequency inflation forecasting. Later, I use synthetic data for a forecasting exercise in this paper due to lack of availability of other data types.
+		
+		\subsection{Web Scrapping}
+		
+		
+		In recent literature, the daily consumer price index (CPI) produced by the Billion Prices Project (BPP CPI) of \cite{cavallo2016billion} offers a glimpse of the direction taken by consumer price inflation in \textit{real time}. For instance, Figure 2 is based on web scrapping online inflation data for Argentina \cite{cavallo2016billion}. It shows that the official CPI significantly under-stated actual inflation, when measured by web scrapping. An added benefit of such data is that it reveals the partisan measurement and particularly disclosure of CPI data in developing economies such as Argentina, where central bank independence is low. 
+		
+		Should we expect a similar lack of correspondence between official inflation data of the SBP (State Bank of Pakistan) and non-partisan research measures? Not much is known about the political business cycle in Pakistan and I believe that independent research, not originating from SBP is needed to address the question. Given the low levels of central bank independence in Pakistan and existing literature \cite{vuletin2011replacing}, we should expect that higher levels of price stability can be achieved if governor appointments and turnovers are not manipulated by political powers. 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.7\linewidth]{onlineversusCPI.png}
+				\caption{Inflation in Argentina (Source is \cite{cavallo2016billion})}
+			\end{Center}
+		\end{figure}
+		
+		
+		With increasing scope of online transactions in Pakistan, \textit{web scrapping} can also be informative, despite absence of Amazon type large scale online transaction services in Pakistan.
+		
+		\subsection{Scanner Data}
+		
+		
+		
+		Meanwhile, another branch of emerging literature uses scanner-based data (see for instance \cite{beck2020price}) on prices rather than web scrapping. In Figure 3 below, recent scanner-based price indices for Germany are disclosed from the work of \cite{beck2022}. The data compares trajectories in 2022 (red and orange solid lines below) with their historical averages from 2019 to 2021 (blue and purple solid lines) along with historic minimum and maximum values (shaded areas). The data indicates a very strong increase in prices for sunflower oil and flour in light of the Ukraine conflict, accompanied by temporarily higher sales. The price increase of sunflower oil was rather gradual and already started as of early February. In contrast, prices for flour increased very sharply, but only more than two months after the invasion. However, in both cases, sales went far beyond their average levels, suggesting increased demand and possibly stockpiling behavior from pessimistic consumers (see \cite{cavallo2021can}). Concerning the more recent period up to June 2022, prices for both products seemed to have stabilized at a very high level, whereas quantities have converged back to their average levels.
+		
+		%	\cite{modugno2013now}.
+		
+		%	\cite{beck2020price}.
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{germany_inflationforecastscanner.png}
+				\caption{Source is \cite{beck2022}}
+			\end{Center}
+		\end{figure}
+		
+		
+		I propose that high frequency \textit{scanner data} from super markets in Pakistan can improve high frequency inflation forecasting. In Karachi, Carrefour, Metro, Chase, Chase Up, Imtiaz supermarket and Bin Hashim are some major super markets. Similarly, Al-Fatah, Carrefour and Imtiaz supermarket are some major super market players in Lahore. However, lack of availability for super market scanner data is a constraint which must be overcome. 
+		
+		\subsection{Synthetic Data}
+		
+		
+		Synthetic data is artificial data (see \cite{nikolenko2021synthetic}) which is generated to mimic key information of the actual data and provide the ability to draw valid statistical inferences. It allows widespread access to data for analysis while overcoming privacy, confidentiality and cost of data collection concerns (also see \cite{raghunathan2021synthetic}). For instance, \cite{patki2016synthetic} develop the SDV (Synthetic Data Vault) which uses multivariate \textit{Gaussian Copula} (see Chapter 5.1.5 of \cite{stachurski2016primer}) to calculate covariances across input columns. The distributions and covariances are sampled from the copula to form synthetic data and as proof of pudding, relational data sets were synthetically generated and used by freelance data scientists to develop predictive models. The researchers found no significant difference between the results produced using the synthetic versus true data \cite{patki2016synthetic}. For review of other generative models for synthetic data and advanced methods such as generative adversarial networks for economists, refer to \cite{koenecke2020synthetic}.
+		
+		Synthetic data is particularly useful for me since high frequency inflation data is not available for Pakistan. It is also essential to state that even at a private level, State Bank of Pakistan does not have high frequency data, so when I use the term \textit{synthetic}, I mean artificially constructed high frequency data from the available low frequency data. This is in contrast with synthetic methods which are solving an information revelation problem by generating synthetic data from actual data of same frequency (see \cite{patki2016synthetic}). 
+		
+		The accuracy of forecasting using \textit{synthetic} data is certainly questionable and using high frequency data through scanner data and web scrapping is part of my long term research agenda. This synthetic data exercise can motivate policy makers and State Bank of Pakistan to initiate collection of high frequency data by providing a glimpse of the utility of high frequency data.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\section{Stylized Facts On Pakistan's Inflation}
+		
+		In this section, I describe and visualize some historical, stylized facts about inflation in Pakistan. I present data on quarterly and monthly inflation rates during the period of 1959 to 2022 or subsets of this maximum range. Moreover, I describe recent trends in inflation after 2018, which are broken down across headline inflation, food inflation, core measures (non-food and non-energy), clothing, health, transport and education sectors.
+		
+		In Figure 4 below, I have plotted the quarterly inflation series for Pakistan from the first quarter of 1958 to sixth quarter of 2022, based on IMF data. During 1980 to 2008, average annualized quarterly inflation rate was around 8\% (representated by the horizontal dotted line). Pakistan had a severe hyperinflation crisis during the 1970's and other major inflation periods were during 2007-2009 (great recession period). Relative to the disinflation observed during 2011 to 2015, there was an inflationary period after 2015, which accelerated particularly in 2018 and 2019. Thus, the upward trend of inflation had already began before the COVID shock in 2020 and the hyperinflation crisis of 2022.
+		
+		
+		
+		
+		
+		
+		
+		
+		%\begin{figure}[H]
+		%	\centering
+		%	\scalebox{0.6}{\input{pakistan_inflation.tex}}
+		%	\hfill
+		%	\caption{Data is From IMF}
+		%\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\scalebox{0.6}{\input{PakInflation_Quarterly.tex}}
+			\hfill
+			\caption{Data is From IMF}
+		\end{figure}
+		
+		
+		
+		The latest available consumer price index (CPI Inflation with Base Year of $2015-16 =100$) data from the State Bank of Pakistan recorded inflation at 8 percent on year-on-year basis in December 2020 (see Table 1 below) and 12.3\% in December 2021. Moreover, core measure of inflation which excludes food and energy (Non-food, Non-Energy (NFNE)) inflation was recorded at 6.4 $\%$ in December 2020 and 8.5$\%$ in December 2021. Meanwhile, across products, food (12.9 $\%$) had among the highest inflation rates and education sector had among the lowest rates at 1.3$\%$ in December 2020. In the case of transport prices, we actually observed deflation of -3.5$\%$ in December 2020, which reflects the demand shock due to lower mobility and the COVID crisis. On the other hand, particularly transport, followed by clothing had among the highest inflation rates in December 2021, which reflects a massive transformation in the transport sector within one year. Education remained among the sectors with lowest inflation rates in December 2021.
+		
+		
+		
+	
+		%On the other hand, Table 2 reveals the trends in inflation during the 2017-2020 period. After the change in government during 2018 (August 2018), we observe that annualized inflation rates in December 2018 have appreciated for the headline and core measures (NFNE which excludes food and energy prices), as well for transport and clothing sectors. However, food inflation went through a substantial disinflation in December 2018 (rising only by 0.9 $\%$) and education sector also displayed some disinflation relative to 2017. Meanwhile, by December 2019, we observed a dramatic increase in inflation food, headline inflation and health. However, core measure, transport and education sector displayed disinflation patterns, which was particularly sharp for education sector. Lastly, for December 2020, after the first serious COVID shock had arrived in 2020, we observed disinflation for headline inflation rate, food inflation core measure, health and education. In fact, we also observed significant deflation in the transport sector. Thus, by and large, the first COVID shock actually decelerated the inflation rates, which were specifically substantial for food, energy and health sectors in 2019, which reveals that before the arrival of COVID, the economy was already overheating in some major sectors.
+		
+		
+		
+		\begin{table}[H]%
+			\def\arraystretch{1}
+			\begin{center}
+				{\sc \caption{Annual National Inflation (December 2017 to December 2021)}}
+				\begin{adjustbox}{width=0.8\textwidth}
+					\setlength{\tabcolsep}{1pt}
+					\resizebox{\textwidth}{!}{
+						\begin{tabular}{lccccccccc}
+							\multicolumn{6}{c}{} \\ \hline
+							\textbf{Year on Year (\%)}  & \textbf{Dec 2017} && \textbf{Dec 2018} && \textbf{Dec 2019} && \textbf{Dec 2020} && \textbf{Dec 2021} \\
+							\specialrule{1pt}{0pt}{0pt} %inserts single line
+							\textbf{Categories} \\
+							Headline Inflation & 4.6 && 5.4 && 12.6 && 8 && 12.3  \\
+							Food Inflation & 3.8 && 0.6 && 17.9 && 12.9 && 10.6  \\  
+							Core Measure (NFNE) & 5.5 && 7.64 && 7.7 && 6.4 && 8.5   \\
+							Clothing & 3.6 && 6.3 && 9.8 && 9.7 &&  11.2   \\
+							Health & 10.9 && 7.1 && 11.3 && 8.1 && 9.4  \\
+							Transport & 4.5 && 18.4 && 14.7 && -3.5 && 24.1  \\
+							Education & 12.4 && 9.8 && 6 && 1.3 && 2.8  \\
+							\specialrule{0.5pt}{0pt}{0pt}
+							\hline
+							\hline
+					\end{tabular}}
+				\end{adjustbox}
+			\end{center}
+			{\footnotesize{Note: Data is from State Bank of Pakistan. Base year is 2015-2016 for all columns, apart from Dec 2017 column for which it is 2007-2008.}} % is used to refer this table in the text
+		\end{table}
+		
+		
+			In Figure 5, we have monthly data for inflation in Pakistan from the IMF. These trends are similar to the quarterly data but we can see more granular and monthly fluctuations within each year from the first month of 1958 to six month (June) of 2022. The horizontal dotted line depicts mean inflation which is close to 8\% for whole sample. With this data, we can also measure the effect of COVID shock and recent hyperinflation crisis of 2022. As I am writing, the current inflation crisis is evolving and Pakistan's exchange rate with respect to USA is finally appreciating since August 2022 after a period of sharp depreciation.
+		
+		
+		\begin{figure}[H]
+			\centering
+			\scalebox{0.6}{\input{PakInflation_Monthly.tex}}
+			\hfill
+			\caption{Data is From IMF}
+		\end{figure}
+		
+		Lastly, Figure 6 plots the most recent trends in monthly, year on year inflation (headline inflation rate)  for Pakistan. The data is from State Bank of Pakistan and covers the months from January 2020 to June 2022. The graph indicates that during 2020, year on year inflation was actually falling despite the COVID shock. In fact, monthly and year on year inflation was close to 5\% in the beginning of 2021. However, in 2022 and especially after the debt crisis of 2022, inflation rates have sky rocketed to more than 20\%. In section 1 of the appendix, I present some additional data on weighted price index, annual consumer price index and annual inflation, based on linked GDP deflator for Pakistan.
+		
+		\begin{figure}[H]
+			\centering
+			\scalebox{0.8}{\input{pakistan_monthlyinf202022.tex}}
+			\hfill
+			\caption{Data is From State Bank of Pakistan}
+		\end{figure}
+		
+		\section{Methodology}
+		
+		
+		
+		
+		I will generate unknown, higher order synthetic series using quarterly and monthly inflation data for Pakistan from the IMF in order to forecast inflation. I use machine learning methods such as multivariate \textit{gaussian copula} (see \cite{patki2016synthetic}) and \textit{probability autoregressive models}. As a robustness check, I also use \textit{cubic spline interpolation} (numerical analysis) to estimate higher order inflation series, which is not a ML methodology.
+		
+		Lastly, I use the generated and actual series, along with VAR models to forecast future inflation in Pakistan. In order to evaluate the forecast accuracy, I first use only quarterly series to estimate monthly inflation and later compare the estimation results with \textit{actual} known monthly series. Moreover, I use a reduced form VAR model and forecast errors to evaluate the forecasting potential of artificial data at various horizons.
+		
+		
+		
+		%After generating the high frequency series, I will evaluate the accuracy of forecasting potential of this artificial data using a VAR (Vector Auto Regressive) model and FEVD (forecast error variance decompositions).
+		
+		
+		
+		\subsection{Synthetic Data From Copula}
+		
+		A copula $C$ in space $\mathbb{R}^{n}$ is a multivariate CDF (cumulative density function) supported by the unit hyperplane $[0,1]^{N}$ with the property that all of its marginals are uniformly distributed on $[0,1]$ (see \cite{stachurski2016primer}). Formally, $C$ is the function of the form below, where $0 \leq s_{n} \leq 1$ and $u_{n} \sim U[0, 1], \forall n$.
+		
+		\begin{equation}
+			C(s_{1}, s_{2}, s_{3}, ... ,s_{N}) = \mathbb{P}\{u_{1} \leq s_{1}, ... , u_{N} \leq s_{N}\}
+		\end{equation}
+		
+		While each $u_{n}$ has its marginal distribution pinned down, there can be infinitely many ways to specify the joint distribution. For instance, the independence copula, gumbel copulas and clayton copulas are some different types of joint distributions \cite{stachurski2016primer}. Figure 6 represents the general structure of a generative model which uses Guassian Copula so that $F(s_{1}, s_{2}, ..., s_{N}) = C(F_{1}(s_{1}), ... F_{N}(s_{N}))$ and $F_{1}, F_{2}, ... ,F_{N}$ are univariate normal distributions.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{generative_modeling_gaussiancopula.png}
+				\caption{Source is  \cite{patki2016synthetic}}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		In Figure 7 below, I use Gaussian Copula to generate synthetic time series for inflation in Pakistan for 250 quarters from quarter 1 which is 1958Q2 and ending at 2020Q3. A quick comparison with previous Figure 4 above can reveal that the series roughly estimates the actual, quarterly inflation. I have generated simulations for both 100 and 500 size to demonstrate that results are robust. The average inflation in simulation closely approximately the average quarterly inflation of around 8\%. However, there is a lot of variation across quarters due to the noise introduced by the gaussian copula.
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{SyntheticInflation_Simulation100.png}
+				\includegraphics[width=0.8\linewidth]{SyntheticInflation_Simulation500.png}
+				\caption{Author's Simulations}
+			\end{Center}
+		\end{figure}
+		
+		\subsection{Synthetic Data From PAR}
+		
+		Probability Autoregessive Model (PAR) is a synthetic data creation methodology which is well suited for time series models and accounts for the autocorrelation structure of time series data. The PAR class allows learning multiple types, multivariate time series data and generating new synthetic data that has the same format and properties as the learned one. \cite{salinas2020deepar} have done path-breaking work at the frontier by developing probabilistic forecasting models with autoregressive, recurrent \textit{neural networks}.
+		
+		In Figure 8 below, I reveal my results from applying the PAR model which includes only the inflation time series from 1958Q2 to 2020Q3 for Pakistan. A combination of 100 simulations from the fitted PAR model reveals that this model has roughly the same mean inflation of around 8\% as the output from gaussian copula. However, the volatility of simulated outputs has actually increased since occasionally the PAR model draw values above 30 and even 40\% inflation. Even with 500 simulations, the gaussian copula based simulations rarely cross even a 25\% inflation level.
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{SyntheticInflation_ParModel100Simulations.png}
+				%\includegraphics[width=0.8\linewidth]{SyntheticInflation_Simulation500.png}
+				\caption{Author's Simulations}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		%For instance, \cite{bonhomme2009assessing} use copulas to model one component of earning dynamics in a study based on three year panels from the French Labor Force Survey. The cross-sections are relatively large (around 30,000), allowing for flexible modeling of marginal distributions via a mixture of normal distributions. However, the time series dimension is short, so they use a one parameter family of copulas to bind the marginals across time in a parsimonious way.
+		
+		\subsection{Cubic Spline Interpolation}
+		
+		Cubic spline interpolation is an interpolation method used in numerical analysis. It uses \textit{cubic polynomials} to connect the existing data nodes, which allows estimation of unknown and high frequency intermediate data points. For a mathematical and formal review of cubic spline interpolation, you can refer to \cite{burden2015numerical} and the appendix of this paper.
+		
+		Consider the following data points $(x_{i}, y_{i})$ in equation 2:
+		
+		\begin{equation}
+			(x_{0}, y_{0}), (x_{1}, y_{1}), .... , (x_{n}, y_{n})
+		\end{equation}
+		
+		
+		where $x_{0} < x_{1} < ... < x_{n}$. In equation 3 below, the cubic polynomial's interpolating pairs of data are labeled as $S_{0},..., S_{n-1}$. The polynomial $S_{i}$ interpolates the nodes $(x_{i}, y_{i})$ and $(x_{i+1}, y_{i+1})$ in equation 2 above. Let:
+		
+		
+		\begin{equation}
+			S_{i}(x) = a_{i} + b_{i}x + c_{i}x^{2} + d_{i}x^{3}, \forall i = 0, 1, 2, ... ,n-1
+		\end{equation}
+		
+		
+		
+		
+		
+		
+		Based on quarterly inflation series for Pakistan, I carry out cubic spline interpolation exercises, displayed in figures  below. The data is for period from 1958 to 2022 for Pakistan. Despite having access to only quarterly data, visible in the dots of Figure 10, the interpolation allows me access to a higher order approximation for monthly inflation rates in this period. Similarly, I can use monthly inflation data to approximate the unknown weekly inflation series (Figure 11).
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{monthlyinflation_naturalcubicspline.pdf}
+				\caption{Using Quarterly Inflation to Interpolate Monthly Inflation}
+			\end{Center}
+		\end{figure}
+		
+		The monthly data incorporates 774 months from January 1958 to June 2022.
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{weeklyinflation_naturalcubicspline.pdf}
+				\caption{Using Monthly Inflation to Interpolate Weekly Inflation}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		
+		\section{Forecasts and Forecast Evaluation}
+		
+		
+		
+		The latest and well-recognized work on forecasting in Pakistan is done by \cite{ahmad2019evaluation} and \cite{syed2021macroeconomic}. The former use quarterly data (1980Q4-2017Q2) of real GDP, CPI, USD/PKR exchange rate and Call Money Rate. Since actual quarterly data of GDP are not available in Pakistan, they approximate GDP data from \cite{hanif2018thick}, where this series is available till 2012Q2. For 2012Q2-2017Q2, they interpolate annual real GDP series. For foreign variables, they use USA GDP, CPI and 3-months T-Bill rate. They use annual series of Pakistan and US population from UN's Population Statistics and estimate quarterly series through cubic interpolation. 
+		
+		Whereas \cite{syed2021macroeconomic} use machine learning methodology and monthly inflation data from July 2007 to July 2017 to forecast the CPI inflation, GDP growth and the weighted average overnight repurchase rate in Pakistan. They use naive mean model and the autoregressive model as benchmarks and compare their forecasting performance against the dynamic factor model (DFM) and basic machine learning methods such as the ridge regressions, LASSO, elastic nets and bagging etc.
+		
+		I start with a simple, reduced form VAR Model for forecasting high frequency inflation and discuss forecast error variance decompositions. I use multiple data subsets, the longest of which is from 1958 January to 2022 June. Even though my forecasting exercise is closely related to the above discussed two papers, I am forecasting the high frequency inflation series, which leads to a different construction for my VAR model as opposed to the focus on forecasting GDP in \cite{ahmad2019evaluation}. Meanwhile, \cite{syed2021macroeconomic} also forecasts inflation based on ML techniques but the main contribution of my paper is not the forecasting exercise but use of cutting-edge methods using ML \textit{and} synthetic data as opposed to basic ML methods such as ridge regressions (see \cite{syed2021macroeconomic}). To the best of knowledge, this combination of methodologies has not been applied in Pakistan to forecasts high frequency inflation.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\section{Conclusion}
+		
+		In this working paper, I review cutting edge methodologies for inflation forecasting, while being motivated by the current inflation crisis of Pakistan. Making use of high frequency scanner, web-scrapped and synthetic data can make inflation forecasting and measurement more accurate, which can make policy interventions more well-informed about the ground realities. I use synthetic data and numerical techniques to estimate the unknown high frequency inflation series for Pakistan in the period from 1958 to 2022. Even though data constraints do not allow me to use web-scrapping and scanner data, my future research agenda is to collect high frequency inflation data from super-market scanners and online data for Pakistan. 
+		
+		More specifically, I uses \textit{gaussian copula}, \textit{probability autoregressive models} and \textit{cubic spline} interpolation. I find that we can approximate monthly and other low order (weekly or daily) inflation series for Pakistan using this methodology. I evaluate the forecast accuracy by using quarterly inflation series to generate forecasts before comparing them with actual monthly series. In addition, I use a standard, reduced form, vector autoregressive model (VAR) and forecast errors for inflation to evaluate forecasting potential of these methods.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\newpage
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\section{Appendix}
+		
+		\subsection{Stylized Facts}
+		
+		In Figure 12, I have the weighted price index based inflation measure, which is at monthly frequency and year on year basis (1962 on wards). Meanwhile, Figure 13 depicts annual consumer price index (1958 on wards) and 14 represents annual inflation rate based on linked GDP deflator after 1990.
+		
+			\begin{figure}[H]
+			\centering
+			\scalebox{0.6}{\input{Pak_MonthlyWPI.tex}}
+			\hfill
+			\caption{Data is From IMF}
+		\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\scalebox{0.6}{\input{Pak_AnnualCPIYonY.tex}}
+		\hfill
+		\caption{Data is From IMF}
+	\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\scalebox{0.6}{\input{Annual_Inf_DeflatorLinked.tex}}
+	\hfill
+	\caption{Data is From IMF}
+\end{figure}
+	
+
+		
+		
+		\subsection{Cubic Spline Interpolation}
+		
+		Cubic spline interpolation is the most common spline interpolation method. It uses cubic polynomials to connect the nodes. Consider the data in equation 4:
+		
+		\begin{equation}
+			(x_{0}, y_{0}), (x_{1}, y_{1}), .... , (x_{n}, y_{n})
+		\end{equation}
+		
+		
+		where $x_{0} < x_{1} < ... < x_{n}$. In equation 5 below, the cubic polynomial's interpolating pairs of data are labeled as $S_{0},..., S_{n-1}$. The polynomial $S_{i}$ interpolates the nodes $(x_{i}, y_{i})$ and $(x_{i+1}, y_{i+1})$ in equation 4 above.
+		
+		
+		\begin{equation}
+			S_{i}(x) = a_{i} + b_{i}x + c_{i}x^{2} + d_{i}x^{3}, \forall i = 0, 1, 2, ... ,n-1
+		\end{equation}
+		
+		
+		Under the above formulation, there are $4n$ unknowns to be determined and the following four set of equations (6 to 8) must be satisfied by the interpolating function. The first set of two conditions (sets 6 and 7) are merely consistency conditions with the peer of data inputs. The last two equations are referred to as smoothness or boundary conditions. We have to choose boundary conditions with two possible choices, a free or natural boundary (equation set 8) or a clamped boundary (equation set 9). In sum, there are $4n$ equations since the first set 6 of equations give us $2n$ equations, the second set of conditions gives us $2n-2$ (set 7) and last set (8 or 9) gives us $2$ equations ($2n + 2n -2 + 2 = 4n$) regardless of which we choose. It turns out that this systems of equations has one unique solution (for a proof see \cite{burden2015numerical}).
+		
+		
+		
+		
+		\begin{equation}
+			S_{i}(x_{i}) = y_{i}, \\ S_{i}(x_{i+1}) = y_{i+1}
+		\end{equation}
+		
+		\begin{equation}
+			S_{i-1}^{'}(x_{i}) = S_{i}^{'}(x_{i}), \\ S_{i-1}^{''}(x_{i}) = S_{i}^{''}(x_{i})
+		\end{equation}
+		
+		
+		Free or Natural Boundary: 
+		
+		\begin{equation}
+			S_{0}^{''}(x_{0}) = S_{N-1}^{''}(x_{n}) = 0
+		\end{equation}
+		
+		Clamped Boundary:  
+		
+		\begin{equation}
+			S_{0}^{'}(x_{0}) = f'(x_{0}), \\ S_{N-1}^{'}(x_{n}) = f'(x_{n})
+		\end{equation}
+	
+	
+		In the Figure below, I have an example of interpolating the so called Runge function which is $y = \frac{1}{1 + x^{2}}$, in the data range of $[-5, 5]$ by the Natural Cubic Spline (with natural boundary condition) and the Newton Interpolation methods (green line). The graph demonstrates that the natural cubic spline estimates the original function with high precision. However, the newton interpolation method is noisy and has particularly extreme errors toward the two tale ends of the data.
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{interpolation_runge_function.pdf}
+				\caption{Example is From \cite{okten2019first}}
+			\end{Center}
+		\end{figure}
+	
+		%\section*{Urban and Rural Inflation Breakdown}
+		
+		
+		%\begin{table}[H]%
+		%	\def\arraystretch{1}
+		%	\begin{center}
+			%		{\sc \caption{Annual Inflation For Pakistan (December 2020)}}
+			%		\begin{adjustbox}{width=0.8\textwidth}
+				%			\setlength{\tabcolsep}{1pt}
+				%			\resizebox{\textwidth}{!}{
+					%				\begin{tabular}{lccccc}
+						%					\multicolumn{4}{c}{} \\ \hline
+						%					& (1) & & (2) && (3) \\
+						%					\textbf{Year on Year (\%)}  & \textbf{National} & & \textbf{Urban} & & \textbf{Rural}   \\
+						%					\specialrule{1pt}{0pt}{0pt} %inserts single line
+						%					\textbf{Categories} \\
+						%					Headline Inflation & 8 && 7 && 9.5 \\
+						%					Food Inflation &  && 12.6 && 13.4 \\
+						%					Core Measure (NFNE) & && 5.6 && 7.7 \\
+						%					Clothing & 9.6 && 8.8 && 10.6 \\
+						%					Health & 8.1 && 7.4 && 8.8 \\
+						%					Transport & -3.5 && -3.6 && -3.3 \\
+						%					Education & 1.3 && 1 && 2 \\
+						%					Restaurants & 9.9 && 10 && 9 \\
+						%					\specialrule{0.5pt}{0pt}{0pt}
+						%					\hline
+						%					\hline
+						%			\end{tabular}}
+				%		\end{adjustbox}
+			%	\end{center}
+		%	{\footnotesize{Note: Data is from State Bank of Pakistan 2020 Release.}} % is used to refer this table in the text
+		%	\end{table}
+	
+	
+	
+	
+	
+	
+	\newpage
+	%_________________ End of Main Matter_________________%
+	%_________________ Reference Section _______________%
+	\phantomsection % allows for correct link to Table of Contents
+	\addcontentsline{toc}{section}{References} % Adds the line "References" to Table of contents
+	\singlespacing
+	%\bibliography{references} % Uses the Bibtex-file mybibfile.bib
+	\newpage
+	\bibliographystyle{aer}
+	\bibliography{references}
+	\clearpage
+	%_________________ Space for Supplementary Material _______________%
+	
+	
+	
+	
+	%\section*{Appendix}
+	
+	
+	
+	
+	
+\end{document}
+
+
